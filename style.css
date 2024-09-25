@@ -1,0 +1,101 @@
+/* body{
+    margin: 0;
+    background-color: bisque;
+}
+div{
+    background-color:white;
+    width: 200px;
+    height: 100px;    
+    margin: 15px;
+    animation:expand 1.5s linear 0.5s infinite ;
+    transition: background-color 1.5s linear;
+
+}
+div:hover{
+    animation-play-state: paused;
+    background-color: black;
+}
+@keyframes expand{
+    0%{
+        width: 200px;
+        
+    }
+    50%{
+        width: 600px;
+    }
+    100%{
+        width: 200px;
+    }
+} */
+
+ body{
+    margin: 0;
+
+}
+
+.loader_container{
+    background-color: rgb(129, 195, 129);
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 10px;
+}
+.loader_container > div{
+    width: 20px;
+    height: 20px;
+    background-color: white;
+    margin: 5px;
+    border-radius: 10px;
+}
+.loader_1,.loader_2,.loader_3{
+    animation: loader 0.9s linear 0.1s infinite;
+}
+.loader_2{
+        animation-delay: 0.2s;
+}
+.loader_3{
+    animation-delay: 0.3s;
+}
+@keyframes loader{
+    0%{
+        transform:translateY(0);
+    }
+    50%
+    {
+        transform:translateY(20px);
+    }
+    100%{
+        transform:translateY(0);
+    }
+} 
+
+.spin_container{
+
+    background-color: rgb(129, 195, 129);
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 10px;
+}
+.spin{
+    width: 80px;
+    height: 80px;
+    background-color: rgb(129, 195, 129);
+    border-radius: 50%;
+    border: 10px solid rgb(220, 220, 220);
+    border-top: 10px solid rgb(106, 124, 227);
+    animation: spin 1.0s linear 0.5s infinite;
+}
+
+@keyframes spin{
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
